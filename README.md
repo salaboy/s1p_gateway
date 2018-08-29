@@ -1,2 +1,1 @@
-# sp1_gateway
-SpringOne 2018: Gateway
+# spring-cloud-k8s-gateway
