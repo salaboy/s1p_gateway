@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.spring.cloud.examples</groupId>
   <artifactId>spring-cloud-k8s-gateway</artifactId>
-  <version>1.0.6</version>
+  <version>1.0-SNAPSHOT</version>
   <name>Spring Cloud Kubernetes Examples :: Gateway</name>
   <properties>
     <java.version>1.8</java.version>
