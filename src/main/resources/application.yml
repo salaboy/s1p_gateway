@@ -6,6 +6,10 @@ spring:
         locator:
           enabled: true
           url-expression: "'http://'+serviceId"
+    kubernetes:
+      discovery:
+        filter: "metadata.additionalProperties['spring-boot']"
+
 server.port: 8080
 logging:
   level:

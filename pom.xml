@@ -62,10 +62,6 @@
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-kubernetes-discovery</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-kubernetes-ribbon</artifactId>
-    </dependency>
 
   </dependencies>
   <build>
@@ -124,6 +120,14 @@
       <releases>
         <enabled>false</enabled>
       </releases>
+    </repository>
+    <repository>
+      <id>jenkinsx</id>
+      <name>Jenkins X Releases</name>
+      <url>http://nexus.jx.35.195.224.137.nip.io/repository/maven-group/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
     </repository>
   </repositories>
 </project>
