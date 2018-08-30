@@ -17,10 +17,10 @@ service:
 resources:
   limits:
     cpu: 500m
-    memory: 512Mi
+    memory: 768Mi
   requests:
     cpu: 400m
-    memory: 512Mi
+    memory: 768Mi
 probePath: /actuator/health
 livenessProbe:
   initialDelaySeconds: 60
@@ -32,3 +32,7 @@ readinessProbe:
   successThreshold: 1
   timeoutSeconds: 1
 terminationGracePeriodSeconds: 10
+javaOpts:
+  xmx: 768m
+  xms: 512m
+  other: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90
