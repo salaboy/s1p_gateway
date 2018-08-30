@@ -9,5 +9,5 @@ dependencies:
   repository: https://chartmuseum.build.cd.jenkins-x.io
   version: 2.3.56
 - alias: preview
-  name: sp1-gateway
-  repository: file://../sp1-gateway
+  name: s1p-gateway
+  repository: file://../s1p-gateway

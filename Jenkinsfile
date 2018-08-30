@@ -4,7 +4,7 @@ pipeline {
     }
     environment {
       ORG               = 'salaboy'
-      APP_NAME          = 'sp1-gateway'
+      APP_NAME          = 's1p-gateway'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
     stages {
@@ -50,7 +50,7 @@ pipeline {
             sh "echo \$(jx-release-version) > VERSION"
             sh "mvn versions:set -DnewVersion=\$(cat VERSION)"
           }
-          dir ('./charts/sp1-gateway') {
+          dir ('./charts/s1p-gateway') {
             container('maven') {
               sh "make tag"
             }
@@ -70,7 +70,7 @@ pipeline {
           branch 'master'
         }
         steps {
-          dir ('./charts/sp1-gateway') {
+          dir ('./charts/s1p-gateway') {
             container('maven') {
               sh 'jx step changelog --version v\$(cat ../../VERSION)'
 

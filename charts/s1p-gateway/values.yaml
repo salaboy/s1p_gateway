@@ -7,7 +7,7 @@ image:
   tag: dev
   pullPolicy: IfNotPresent
 service:
-  name: sp1-gateway
+  name: s1p-gateway
   type: ClusterIP
   externalPort: 80
   internalPort: 8080
