@@ -3,8 +3,8 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: draft
-  tag: dev
+  repository: 10.63.247.17:5000/salaboy/s1p-gateway
+  tag: 1.0.11
   pullPolicy: IfNotPresent
 service:
   name: s1p-gateway
