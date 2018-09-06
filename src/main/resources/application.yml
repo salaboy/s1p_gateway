@@ -8,7 +8,7 @@ spring:
           url-expression: "'http://'+serviceId"
     kubernetes:
       discovery:
-        filter: "metadata.labels['spring-boot']"
+        filter: "metadata.labels['s1p']"
 
 server.port: 8080
 logging:

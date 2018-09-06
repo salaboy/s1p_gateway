@@ -3,10 +3,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.spring.cloud.examples</groupId>
-    <artifactId>s1pgateway</artifactId>
+    <groupId>org.spring.cloud.k8s.s1p</groupId>
+    <artifactId>s1p-gateway</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Spring Cloud Kubernetes Examples :: Gateway</name>
+    <name>S1P :: Gateway</name>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,7 +14,7 @@
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
-        <spring.cloud.k8s.version>0.0.13</spring.cloud.k8s.version>
+        <spring.cloud.k8s.version>1.0.0.BUILD-SNAPSHOT</spring.cloud.k8s.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -98,35 +98,11 @@
     </build>
     <repositories>
         <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-snapshots</id>
-            <name>Spring Snapshots</name>
-            <url>https://repo.spring.io/snapshot/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>alfresco-snapshots</id>
-            <name>Alfresco Snapshots</name>
-            <url>https://artifacts.alfresco.com/nexus/content/repositories/activiti-snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-        <repository>
             <id>jenkinsx</id>
             <name>Jenkins X Releases</name>
             <url>http://nexus.jx.35.195.224.137.nip.io/repository/maven-group/</url>
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
             </snapshots>
         </repository>
     </repositories>
