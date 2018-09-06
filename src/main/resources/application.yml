@@ -9,10 +9,6 @@ spring:
     kubernetes:
       discovery:
         filter: "metadata.labels['s1p']"
-      reload:
-        enabled: true
-        mode: polling
-        period: 5000
 
 server.port: 8080
 logging:
