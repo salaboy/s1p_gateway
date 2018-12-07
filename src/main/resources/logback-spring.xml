@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <configuration>
-  <springProfile name="kube">
+  <springProfile name="kubernetes">
     <appender name="stash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
       <destination>logstash:5000</destination>
 

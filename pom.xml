@@ -13,9 +13,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-        <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
-        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
-        <spring.cloud.k8s.version>1.0.0.BUILD-SNAPSHOT</spring.cloud.k8s.version>
+        <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
+        <spring-cloud.version>Greenwich.M3</spring-cloud.version>
+        <spring.cloud.k8s.version>0.3.0.BUILD-SNAPSHOT</spring.cloud.k8s.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -61,6 +61,10 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-kubernetes-istio</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-kubernetes-discovery</artifactId>
         </dependency>
         <dependency>
@@ -103,12 +107,10 @@
     </build>
     <repositories>
         <repository>
-            <id>jenkinsx</id>
-            <name>Jenkins X Releases</name>
-            <url>http://nexus.jx.35.195.224.137.nip.io/repository/maven-group/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <id>spring milestones</id>
+
+            <url>http://repo.spring.io/milestone/</url>
+
         </repository>
     </repositories>
 </project>

@@ -3,9 +3,9 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: draft
-  tag: dev
-  pullPolicy: IfNotPresent
+  repository: salaboy/s1p_gateway 
+  tag: istio 
+  pullPolicy: Always
 service:
   name: s1p-gateway
   type: ClusterIP

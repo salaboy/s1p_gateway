@@ -11,13 +11,11 @@ spring:
         enabled: true
         mode: polling
         period: 5000
-      discovery:
-        filter: "metadata.labels['s1p']"
-
 
 server.port: 8080
 logging:
   level:
+    org.springframework.cloud.kubernetes: TRACE
     org.springframework.cloud.gateway: TRACE
     org.springframework.cloud.loadbalancer: TRACE
 management:
